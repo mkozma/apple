@@ -1,3 +1,4 @@
+import { TicketsFormComponent } from './components/tickets-form/tickets-form.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -18,6 +19,7 @@ import { UserFormComponent } from './components/user-form/user-form.component';
         CounterComponent,
         FetchDataComponent,
         HomeComponent,
+        TicketsFormComponent,
         UserFormComponent
     ],
     imports: [
@@ -27,6 +29,7 @@ import { UserFormComponent } from './components/user-form/user-form.component';
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
+            { path: 'tickets', component: TicketsFormComponent },
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
             { path: 'user', component: UserFormComponent },
