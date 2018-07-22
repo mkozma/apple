@@ -1,1 +1,15 @@
 <h2>Ticket Form</h2>
+<table class='table' *ngIf="series">
+        <thead>
+            <tr>
+                <th>Series</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let serie of series">
+                <td>{{ serie.name }}</td>
+                <td><button class="btn btn-primary" [routerLink]="['/tickets',serie.id]">Select</button></td>
+            </tr>
+        </tbody>
+    </table>

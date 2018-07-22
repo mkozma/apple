@@ -11,14 +11,16 @@
             <th>Temp. (C)</th>
             <th>Temp. (F)</th>
             <th>Summary</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let forecast of forecasts">
+        <tr *ngFor="let forecast of forecasts; let i = index;">
             <td>{{ forecast.dateFormatted }}</td>
             <td>{{ forecast.temperatureC }}</td>
             <td>{{ forecast.temperatureF }}</td>
             <td>{{ forecast.summary }}</td>
+            <td><button class="text" [routerLink]="['/fetch-data/',i]">Select</button></td>
         </tr>
     </tbody>
 </table>
